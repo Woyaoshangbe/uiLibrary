@@ -441,9 +441,7 @@ function Library:create(options)
 		AnchorPoint = Vector2.new(1, 1),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -30,1, -30),
-		Size = UDim2.new(0, 300, 1, -60),
-		Active = true,
-		Draggable = true
+		Size = UDim2.new(0, 300, 1, -60)
 	})
 
 	local _notiHolderList = notificationHolder:object("UIListLayout", {
@@ -455,7 +453,9 @@ function Library:create(options)
 		Size = UDim2.new(),
 		Theme = {BackgroundColor3 = "Main"},
 		Centered = true,
-		ClipsDescendants = true		
+		ClipsDescendants = true,
+		Active = true,
+	    Draggable = true
 	}):round(10)
 
 	core:fade(true, nil, 0.2, true)
